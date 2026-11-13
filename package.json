@@ -1,0 +1,33 @@
+{
+  "name": "steam-mcp",
+  "version": "0.1.0",
+  "license": "MIT",
+  "description": "Code Mode MCP server for the Steam Web and Store APIs",
+  "repository": "https://github.com/ZeroNeroIV/SteamMCP",
+  "keywords": ["mcp", "steam", "codemode", "gemini", "oauth", "bun", "quickjs"],
+  "type": "module",
+  "bin": {
+    "steam-mcp": "src/cli.ts"
+  },
+  "scripts": {
+    "start": "bun src/cli.ts stdio",
+    "start:http": "bun src/cli.ts http",
+    "test": "bun test test --path-ignore-patterns \"test/integration/**\"",
+    "test:integration": "bun test test/integration",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "bun": ">=1.2"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "express": "^5.3.0",
+    "quickjs-emscripten": "^0.32.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.4",
+    "@types/express": "^5.0.6",
+    "typescript": "^7.0.2"
+  }
+}
